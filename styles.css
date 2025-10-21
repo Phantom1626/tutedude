@@ -1,0 +1,142 @@
+/* GLOBAL STYLES & RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Use a clear, modern font */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* The Hero Section must fit the screen without scrolling.
+  We will use VH (Viewport Height) and VW (Viewport Width) units. 
+*/
+
+/* --- NAVBAR STYLES --- */
+.navbar {
+    /* Fixed height for the navbar, using VH for screen-relative size */
+    height: 10vh; 
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5vw; /* Padding on the sides */
+    background-color: #ffffff; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+    font-size: 1.8vw; /* Relative font size */
+    font-weight: 700;
+    color: #3f51b5; /* Primary color for the logo */
+}
+
+.highlight {
+    color: #ff9800; /* Accent color */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1.5vw;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.1vw;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #3f51b5;
+}
+
+.user-name {
+    font-size: 1.1vw;
+    color: #555;
+    font-weight: 600;
+    background: #9eedeef3;
+    
+}
+
+/* --- HERO SECTION STYLES --- */
+.hero-section {
+    /* The full section (Navbar + Hero) must not scroll. 
+      If Navbar is 10vh, Hero must be 90vh (100vh - 10vh = 90vh).
+    */
+    height: 90vh; 
+    width: 100vw;
+    display: flex;
+    /* Center the content vertically within the hero section */
+    align-items: center; 
+    padding: 0 5vw;
+    background-color: #f0f4f8; /* Light background for contrast */
+}
+
+/* Left Div: Content */
+.hero-content {
+    flex: 1; /* Takes up equal space as the image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 5vw; /* Space between content and image */
+}
+
+.hero-content h1 {
+    /* Use VW for responsive heading size */
+    font-size: 4.5vw; 
+    color: #3f51b5;
+    margin-bottom: 2vh; /* Use VH for vertical spacing */
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.hero-content p {
+    /* Use VW for responsive paragraph size */
+    font-size: 1.3vw; 
+    color: #555;
+    margin-bottom: 4vh;
+    line-height: 1.5;
+}
+
+/* Button */
+.cta-button {
+    align-self: flex-start; /* Aligns the button to the left */
+    padding: 1.5vh 3vw;
+    font-size: 1.2vw;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #ff9800; /* Accent color for the CTA */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: #e68900;
+    transform: translateY(-2px);
+}
+
+/* Right Div: Image */
+.hero-image {
+    flex: 1; /* Takes up equal space as the content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    /* Make the image fill its container, keeping its aspect ratio */
+    width: 100%;
+    height: auto;
+    /* Use a max-height relative to the viewport to control image size */
+    max-height: 70vh; 
+    object-fit: contain;
+    border-radius: 10px;
+}
